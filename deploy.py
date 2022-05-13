@@ -8,7 +8,7 @@ Created on Thu May 12 14:20:24 2022
 from tensorflow.keras.models import load_model
 import os
 import json
-from sentiment_analysis import ExploratoryDataAnalysis
+from sentiment_analysis_modules import ExploratoryDataAnalysis
 from tensorflow.keras.preprocessing.text import tokenizer_from_json
 import numpy as np
 #import warnings
@@ -28,11 +28,11 @@ with open(JSON_PATH, 'r') as json_file:
 #%% EDA
 
 # 1: Load Data
-new_review = ['<br \> I decided to watch the movie during my off day from work\
-              but I was bored halfway trough the movie so it feels like\
-              it has wasted my precious holiday.<br \>']
+#new_review = ['<br \> I decided to watch the movie during my off day from work\
+#              but I was bored halfway trough the movie so it feels like\
+#              it has wasted my precious holiday.<br \>']
               
-#new_review = [input('Review about the movie\n')]
+new_review = [input('Review about the movie\n')]
               
 # 2: Clean Data
 eda = ExploratoryDataAnalysis()
